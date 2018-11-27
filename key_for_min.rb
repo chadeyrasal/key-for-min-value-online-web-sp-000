@@ -5,8 +5,17 @@ def key_for_min_value(name_hash)
   lowest_number = name_hash.first.to_a[1]
   counter = 0
   name_hash.each do |key, number|
-    while counter < 
-      counter += 1
+    if name_hash == {}
+      nil
+    else
+      while counter < hash.length
+        if number < lowest_number
+          lowest_number = number
+        end
+        counter += 1
+      end
+      key
     end
+    
   end
 end
